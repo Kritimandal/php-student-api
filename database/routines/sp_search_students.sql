@@ -1,6 +1,6 @@
 CREATE PROCEDURE sp_search_students(
-    IN p_term VARCHAR(100),
-    IN p_city VARCHAR(100),
+    IN p_term VARCHAR(100) CHARACTER SET utf8mb4,
+    IN p_city VARCHAR(100) CHARACTER SET utf8mb4,
     IN p_limit INT,
     IN p_offset INT
 )

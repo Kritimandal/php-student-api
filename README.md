@@ -96,7 +96,13 @@ cd php-student-api
 composer install
 ```
 
-Create a database (for example `student_api`), set the connection details as environment variables (see `.env.example`), then:
+Create a database:
+
+```sql
+CREATE DATABASE student_api CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+Set the connection details as environment variables (see `.env.example`), then:
 
 ```bash
 php bin/migrate.php --seed
