@@ -5,6 +5,6 @@ CREATE PROCEDURE sp_count_students(
 BEGIN
     SELECT COUNT(*) AS total
     FROM students
-    WHERE (p_term IS NULL OR name LIKE CONCAT('%', p_term, '%') ESCAPE '!' OR city LIKE CONCAT('%', p_term, '%') ESCAPE '!')
-      AND (p_city IS NULL OR city = p_city);
+    WHERE (p_term IS NULL OR name LIKE CONCAT('%', p_term, '%') COLLATE utf8mb4_unicode_ci ESCAPE '!' OR city LIKE CONCAT('%', p_term, '%') COLLATE utf8mb4_unicode_ci ESCAPE '!')
+      AND (p_city IS NULL OR city = p_city COLLATE utf8mb4_unicode_ci);
 END
